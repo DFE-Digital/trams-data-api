@@ -8,7 +8,7 @@ describe("E2E Academy Transfers", () => {
         cy.request({
             method : 'GET',
             failOnStatusCode: false,
-            url: url+"academyTransferProject",
+            url: url+"/academytransferproject",
             headers: {
                 ApiKey: apiKey,
                 "Content-type" : "application/json"
@@ -21,11 +21,11 @@ describe("E2E Academy Transfers", () => {
         })
     });
 
-    it('Find and update a Project and verify the changes', () => {
+    it.skip('Find and update a Project and verify the changes', () => {
         cy.request({
             method : 'GET',
             failOnStatusCode: false,
-            url: url+"academyTransferProject/"+savedURN,
+            url: url+"/academyTransferProject/"+savedURN,
             headers: {
                 ApiKey: apiKey,
                 "Content-type" : "application/json"
@@ -47,7 +47,7 @@ describe("E2E Academy Transfers", () => {
                 "outgoingTrustUkprn": "10060936",
                 "academyPerformanceAdditionalInformation": "Offstead Report - UPDATE TEST"            
             },
-            url: url+"academyTransferProject/"+savedURN,
+            url: url+"/academyTransferProject/"+savedURN,
             headers: {
                 ApiKey: apiKey,
                 "Content-type" : "application/json"
@@ -66,7 +66,7 @@ describe("E2E Academy Transfers", () => {
                 "outgoingTrustUkprn": "10060936",
                 "academyPerformanceAdditionalInformation": "Offstead Report"            
             },
-            url: url+"academyTransferProject/"+savedURN,
+            url: url+"/academyTransferProject/"+savedURN,
             headers: {
                 ApiKey: apiKey,
                 "Content-type" : "application/json"

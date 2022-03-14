@@ -7,7 +7,7 @@ describe("Health Check and Database Check", () => {
         cy.request({
             method : 'GET',
             failOnStatusCode: false,
-            url: url+"HealthCheck",
+            url: url+"/HealthCheck",
             headers: {
               ApiKey: apiKey,
               "Content-type" : "application/json"
@@ -24,7 +24,7 @@ describe("Health Check and Database Check", () => {
         cy.request({
             method : 'GET',
             failOnStatusCode: false,
-            url: url+"check_db",
+            url: url+"/check_db",
             headers: {
               ApiKey: apiKey,
               "Content-type" : "application/json"

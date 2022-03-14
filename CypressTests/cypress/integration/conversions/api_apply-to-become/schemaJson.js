@@ -1,5 +1,5 @@
 /// <reference types="Cypress"/>
-import { applyToBecomeAcademySchema } from "../../../schemas/schema"        
+import { applyToBecomeAcademySchema } from '../../../schemas/schema'
 
 let apiKey = Cypress.env('apiKey')
 let url = Cypress.env('url')
@@ -7,9 +7,9 @@ let url = Cypress.env('url')
 
 describe('Test Against Json Schema API V2 School application', () => {
 
-    it('GET faker_data.json', () => {
+    it('TC01: GET faker_data.json', () => {
         cy.request({
-            url: url + '/v2/apply-to-become/application/0x546c7D999B',
+            url: url + '/v2/apply-to-become/application/0x26BcAE33bD',
             headers: {
                 ApiKey: apiKey,
               }

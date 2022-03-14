@@ -1,11 +1,11 @@
-import Ajv from "ajv";
-import addFormats from "ajv-formats"
+import Ajv from 'ajv';
+import addFormats from 'ajv-formats'
 
 
 // error message
 const getSchemaError = (getAjvError) => {
   return cy.wrap(
-    `Field: ${getAjvError[0]["dataPath"]} is invalid. Cause: ${getAjvError[0]["message"]}`
+    `Field: ${getAjvError[0]['dataPath']} is invalid. Cause: ${getAjvError[0]['message']}`
   );
 };
 
@@ -24,6 +24,6 @@ export const validateSchema = (schema, response) => {
       throw new Error(schemaError);
     });
   } else {
-    cy.log("Schema validated!");
+    cy.log('Schema validated!');
   }
 };
