@@ -81,6 +81,26 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_28b87edd019748f48c8b93fec502bc2c }}
         package: .
+
+  cypress-tests:
+    needs: deploy-to-dev
+    environment: staging
+    if: ${{ github.event.inputs.environment }} == staging
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: CypressTests
+      steps:
+        - uses: actions/checkout@v2
+        - name: Setup node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: "16.x"
+        - name: npm install
+          run: npm install
+        - name: Run cypress
+          run: npm run cy:run -- --env apiKey='${{ secrets.TRAMS_API_KEY }},url='${{ url }}'
+    
 #  deploy-to-pp:
 #    runs-on: windows-latest
 #    needs: build
