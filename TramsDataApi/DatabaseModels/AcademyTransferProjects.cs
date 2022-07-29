@@ -30,11 +30,9 @@ namespace TramsDataApi.DatabaseModels
         public DateTime? TransferFirstDiscussed { get; set; }
         public DateTime? TargetDateForTransfer { get; set; }
         public DateTime? HtbDate { get; set; }
-        public DateTime? HtbDateInserted { get; set; }
         public bool? HasTransferFirstDiscussedDate { get; set; }
         public bool? HasTargetDateForTransfer { get; set; }
         public bool? HasHtbDate { get; set; }
-        public bool? HasHtbDateInserted { get; set; }
         public string ProjectRationale { get; set; }
         public string TrustSponsorRationale { get; set; }
         public string State { get; set; }

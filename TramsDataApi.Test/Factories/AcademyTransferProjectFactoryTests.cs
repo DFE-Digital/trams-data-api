@@ -51,7 +51,6 @@ namespace TramsDataApi.Test.Factories
                 TransferFirstDiscussed = null,
                 TargetDateForTransfer = null,
                 HtbDate = null,
-                HtbDateInserted = null,
                 ProjectRationale = null,
                 TrustSponsorRationale = null,
                 State = null,
@@ -111,10 +110,8 @@ namespace TramsDataApi.Test.Factories
                 .With(d => d.TargetDateForTransfer =
                     randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture))
                 .With(d => d.HtbDate = randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture))
-                .With(d => d.HtbDateInserted = randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture))
                 .With(d => d.HasTransferFirstDiscussedDate = true)
                 .With(d => d.HasHtbDate = true)
-                .With(d => d.HasHtbDateInserted = true)
                 .With(d => d.HasTargetDateForTransfer = true)
                 .Build();
 
@@ -145,9 +142,7 @@ namespace TramsDataApi.Test.Factories
                 TargetDateForTransfer = DateTime.ParseExact(createRequest.Dates.TargetDateForTransfer, "dd/MM/yyyy",
                     CultureInfo.InvariantCulture),
                 HtbDate = DateTime.ParseExact(createRequest.Dates.HtbDate, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                HtbDateInserted = DateTime.ParseExact(createRequest.Dates.HtbDateInserted, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 HasHtbDate = createRequest.Dates.HasHtbDate,
-                HasHtbDateInserted = createRequest.Dates.HasHtbDateInserted,
                 HasTransferFirstDiscussedDate = createRequest.Dates.HasTransferFirstDiscussedDate,
                 HasTargetDateForTransfer = createRequest.Dates.HasTargetDateForTransfer,
                 ProjectRationale = createRequest.Rationale.ProjectRationale,
@@ -238,7 +233,6 @@ namespace TramsDataApi.Test.Factories
                 OtherTransferTypeDescription = academyTransferProject.OtherTransferTypeDescription,
                 TransferFirstDiscussed = academyTransferProject.TransferFirstDiscussed,
                 HtbDate = academyTransferProject.HtbDate,
-                HtbDateInserted = academyTransferProject.HtbDateInserted,
                 TrustSponsorRationale = academyTransferProject.TrustSponsorRationale,
                 State = academyTransferProject.State,
                 Status = academyTransferProject.Status,
@@ -263,7 +257,6 @@ namespace TramsDataApi.Test.Factories
                     academyTransferProject.AcademyTransferProjectIntendedTransferBenefits,
                 HasTransferFirstDiscussedDate = academyTransferProject.HasTransferFirstDiscussedDate,
                 HasHtbDate = academyTransferProject.HasHtbDate,
-                HasHtbDateInserted = academyTransferProject.HasHtbDateInserted,
                 HasTargetDateForTransfer = academyTransferProject.HasTargetDateForTransfer
             };
 
@@ -327,7 +320,6 @@ namespace TramsDataApi.Test.Factories
                 OtherTransferTypeDescription = academyTransferProject.OtherTransferTypeDescription,
                 TransferFirstDiscussed = academyTransferProject.TransferFirstDiscussed,
                 HtbDate = academyTransferProject.HtbDate,
-                HtbDateInserted = academyTransferProject.HtbDateInserted,
                 TrustSponsorRationale = academyTransferProject.TrustSponsorRationale,
                 State = academyTransferProject.State,
                 Status = academyTransferProject.Status,
@@ -351,7 +343,6 @@ namespace TramsDataApi.Test.Factories
                 AcademyTransferProjectIntendedTransferBenefits =
                     academyTransferProject.AcademyTransferProjectIntendedTransferBenefits,
                 HasHtbDate = academyTransferProject.HasHtbDate,
-                HasHtbDateInserted = academyTransferProject.HasHtbDateInserted,
                 HasTransferFirstDiscussedDate = academyTransferProject.HasTransferFirstDiscussedDate,
                 HasTargetDateForTransfer = academyTransferProject.HasTargetDateForTransfer
             };
@@ -409,7 +400,6 @@ namespace TramsDataApi.Test.Factories
                 OtherTransferTypeDescription = academyTransferProject.OtherTransferTypeDescription,
                 TransferFirstDiscussed = academyTransferProject.TransferFirstDiscussed,
                 HtbDate = academyTransferProject.HtbDate,
-                HtbDateInserted = academyTransferProject.HtbDateInserted,
                 TrustSponsorRationale = academyTransferProject.TrustSponsorRationale,
                 State = updateRequest.State,
                 Status = academyTransferProject.Status,
@@ -432,7 +422,6 @@ namespace TramsDataApi.Test.Factories
                 RationaleSectionIsCompleted = academyTransferProject.RationaleSectionIsCompleted,
                 AcademyTransferProjectIntendedTransferBenefits = expectedBenefits,
                 HasHtbDate = academyTransferProject.HasHtbDate,
-                HasHtbDateInserted = academyTransferProject.HasHtbDateInserted,
                 HasTransferFirstDiscussedDate = academyTransferProject.HasTransferFirstDiscussedDate,
                 HasTargetDateForTransfer = academyTransferProject.HasTargetDateForTransfer
             };
@@ -455,8 +444,7 @@ namespace TramsDataApi.Test.Factories
                 {
                     HasTargetDateForTransfer = false,
                     HasTransferFirstDiscussedDate = false,
-                    HasHtbDate = false,
-                    HasHtbDateInserted = false
+                    HasHtbDate = false
                 }
             };
 
@@ -476,7 +464,6 @@ namespace TramsDataApi.Test.Factories
                 OtherTransferTypeDescription = academyTransferProject.OtherTransferTypeDescription,
                 TransferFirstDiscussed = null,
                 HtbDate = null,
-                HtbDateInserted = null,
                 TrustSponsorRationale = academyTransferProject.TrustSponsorRationale,
                 State = academyTransferProject.State,
                 Status = academyTransferProject.Status,
@@ -501,7 +488,6 @@ namespace TramsDataApi.Test.Factories
                     academyTransferProject.AcademyTransferProjectIntendedTransferBenefits,
                 HasTransferFirstDiscussedDate = false,
                 HasHtbDate = false,
-                HasHtbDateInserted = false,
                 HasTargetDateForTransfer = false
             };
 
@@ -528,9 +514,7 @@ namespace TramsDataApi.Test.Factories
                     TransferFirstDiscussed =
                         randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                     HtbDate = randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    HtbDateInserted = randomGenerator.DateTime().ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                     HasHtbDate = false,
-                    HasHtbDateInserted = false,
                     HasTargetDateForTransfer = false,
                     HasTransferFirstDiscussedDate = false
                 }
@@ -552,7 +536,6 @@ namespace TramsDataApi.Test.Factories
                 OtherTransferTypeDescription = academyTransferProject.OtherTransferTypeDescription,
                 TransferFirstDiscussed = null,
                 HtbDate = null,
-                HtbDateInserted = null,
                 TrustSponsorRationale = academyTransferProject.TrustSponsorRationale,
                 State = academyTransferProject.State,
                 Status = academyTransferProject.Status,
@@ -577,7 +560,6 @@ namespace TramsDataApi.Test.Factories
                     academyTransferProject.AcademyTransferProjectIntendedTransferBenefits,
                 HasTransferFirstDiscussedDate = false,
                 HasHtbDate = false,
-                HasHtbDateInserted = false,
                 HasTargetDateForTransfer = false
             };
 

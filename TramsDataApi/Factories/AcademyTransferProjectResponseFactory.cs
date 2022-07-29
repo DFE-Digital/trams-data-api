@@ -44,9 +44,7 @@ namespace TramsDataApi.Factories
                 TargetDateForTransfer =
                     model.TargetDateForTransfer?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                 HtbDate = model.HtbDate?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
-                HtbDateInserted = model.HtbDateInserted?.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture),
                 HasHtbDate = model.HasHtbDate,
-                HasHtbDateInserted = model.HasHtbDateInserted,
                 HasTargetDateForTransfer = model.HasTargetDateForTransfer,
                 HasTransferFirstDiscussedDate = model.HasTransferFirstDiscussedDate
             };

@@ -15,7 +15,6 @@ namespace TramsDataApi.Factories
             var transferFirstDiscussed = ParseDate(request?.Dates?.TransferFirstDiscussed);
             var targetDateForTransfer = ParseDate(request?.Dates?.TargetDateForTransfer);
             var htbDate = ParseDate(request?.Dates?.HtbDate);
-            var htbDateInserted = ParseDate(request?.Dates?.HtbDateInserted);
 
             return new AcademyTransferProjects
             {
@@ -29,7 +28,6 @@ namespace TramsDataApi.Factories
                 TransferFirstDiscussed = transferFirstDiscussed,
                 TargetDateForTransfer = targetDateForTransfer,
                 HtbDate = htbDate,
-                HtbDateInserted = htbDateInserted,
                 ProjectRationale = request.Rationale?.ProjectRationale,
                 TrustSponsorRationale = request.Rationale?.TrustSponsorRationale,
                 State = request.State,
@@ -52,7 +50,6 @@ namespace TramsDataApi.Factories
                 BenefitsSectionIsCompleted = request.Benefits?.IsCompleted,
                 RationaleSectionIsCompleted = request.Rationale?.IsCompleted,
                 HasHtbDate = request.Dates?.HasHtbDate,
-                HasHtbDateInserted = request.Dates?.HasHtbDateInserted,
                 HasTransferFirstDiscussedDate = request.Dates?.HasTransferFirstDiscussedDate,
                 HasTargetDateForTransfer = request.Dates?.HasTargetDateForTransfer
             };
@@ -118,9 +115,7 @@ namespace TramsDataApi.Factories
             original.TransferFirstDiscussed = (updateRequest.Dates?.HasTransferFirstDiscussedDate ?? true) ? (toMerge.TransferFirstDiscussed ?? original.TransferFirstDiscussed) : null;
             original.TargetDateForTransfer = (updateRequest.Dates?.HasTargetDateForTransfer ?? true) ? (toMerge.TargetDateForTransfer ?? original.TargetDateForTransfer) : null;
             original.HtbDate = (updateRequest.Dates?.HasHtbDate ?? true) ? (toMerge.HtbDate ?? original.HtbDate) : null;
-            original.HtbDateInserted = (updateRequest.Dates?.HasHtbDateInserted ?? true) ? (toMerge.HtbDateInserted ?? original.HtbDateInserted) : null;
             original.HasHtbDate = toMerge.HasHtbDate ?? original.HasHtbDate;
-            original.HasHtbDateInserted = toMerge.HasHtbDateInserted ?? original.HasHtbDateInserted;
             original.HasTargetDateForTransfer = toMerge.HasTargetDateForTransfer ?? original.HasTargetDateForTransfer;
             original.HasTransferFirstDiscussedDate =
                 toMerge.HasTransferFirstDiscussedDate ?? original.HasTransferFirstDiscussedDate;

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TramsDataApi.DatabaseModels;
 
 namespace TramsDataApi.Migrations.TramsDb
 {
     [DbContext(typeof(TramsDbContext))]
-    partial class TramsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220729145822_RemovedHtbDateInsertedAndHtbHasDateInserted")]
+    partial class RemovedHtbDateInsertedAndHtbHasDateInserted
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1471,7 +1473,7 @@ namespace TramsDataApi.Migrations.TramsDb
 
                     b.HasIndex("ClosedStatusId");
 
-                    b.ToTable("NTIUnderConsiderationCase","sdd");
+                    b.ToTable("NTIUnderConsideration","sdd");
                 });
 
             modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIUnderConsiderationReason", b =>
@@ -1498,58 +1500,58 @@ namespace TramsDataApi.Migrations.TramsDb
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cash flow problems",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "CashFlowProblems",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cumulative deficit (actual)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "CumulativeDeficitActual",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cumulative deficit (projected)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "CumulativeDeficitProjected",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Governance concerns",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "GovernanceConcerns",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Non-Compliance with Academies Financial/Trust Handbook",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "NonComplianceWithAcademiesFinancialTrustHandbook",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Non-Compliance with financial returns",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "NonComplianceWithFinancialReturns",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Risk of insolvency",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "RiskOfInsolvency",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Safeguarding",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -1585,9 +1587,6 @@ namespace TramsDataApi.Migrations.TramsDb
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -1602,408 +1601,16 @@ namespace TramsDataApi.Migrations.TramsDb
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "No further action being taken",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "NoFurtherAction",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Warning letter or NTI can be set up using \"Add to case\".",
-                            Name = "To be escalated",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetter", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CaseUrn")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("ClosedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("ClosedStatusId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DateLetterSent")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(2000)")
-                        .HasMaxLength(2000);
-
-                    b.Property<int?>("StatusId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClosedStatusId");
-
-                    b.HasIndex("StatusId");
-
-                    b.ToTable("NTIWarningLetterCase","sdd");
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterCondition", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ConditionTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ConditionTypeId");
-
-                    b.ToTable("NTIWarningLetterCondition","sdd");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ConditionTypeId = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 1,
-                            Name = "Trust financial plan",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ConditionTypeId = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 1,
-                            Name = "Action plan",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ConditionTypeId = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 2,
-                            Name = "Lines of accountability",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ConditionTypeId = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 3,
-                            Name = "Providing sufficient challenge",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ConditionTypeId = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 4,
-                            Name = "Scheme of delegation",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ConditionTypeId = 3,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 1,
-                            Name = "Publishing requirements (compliance with)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ConditionTypeId = 4,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 1,
-                            Name = "Financial returns",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterConditionMapping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("NTIWarningLetterConditionId")
-                        .HasColumnType("int");
-
-                    b.Property<long>("NTIWarningLetterId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NTIWarningLetterConditionId");
-
-                    b.HasIndex("NTIWarningLetterId");
-
-                    b.ToTable("NTIWarningLetterConditionMapping","sdd");
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterConditionType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NTIWarningLetterConditionType","sdd");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 1,
-                            Name = "Financial management conditions",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 2,
-                            Name = "Governance conditions",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 3,
-                            Name = "Compliance conditions",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DisplayOrder = 4,
-                            Name = "Standard conditions (mandatory)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterReason", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NTIWarningLetterReason","sdd");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cash flow problems",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cumulative deficit (actual)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cumulative deficit (projected)",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Governance concerns",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Non-compliance with Academies Financial/Trust Handbook",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Non-compliance with financial returns",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Risk of insolvency",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Safeguarding",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterReasonMapping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<long>("NTIWarningLetterId")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("NTIWarningLetterReasonId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NTIWarningLetterId");
-
-                    b.HasIndex("NTIWarningLetterReasonId");
-
-                    b.ToTable("NTIWarningLetterReasonMapping","sdd");
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsClosingState")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NTIWarningLetterStatus","sdd");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsClosingState = false,
-                            Name = "Preparing warning letter",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsClosingState = false,
-                            Name = "Sent to trust",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "The warning letter is no longer needed.",
-                            IsClosingState = true,
-                            Name = "Cancel warning letter",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "You are satisfied that all the conditions have been, or will be, met as outlined in the letter",
-                            IsClosingState = true,
-                            Name = "Conditions met",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Conditions have not been met. Close NTI: Warning letter and begin NTI on case page using \"Add to case\".",
-                            IsClosingState = true,
-                            Name = "Escalate to Notice To Improve",
-                            UpdatedAt = new DateTime(2022, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            CreatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ToBeEscalated",
+                            UpdatedAt = new DateTime(2022, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -2323,56 +1930,6 @@ namespace TramsDataApi.Migrations.TramsDb
                     b.HasOne("TramsDataApi.DatabaseModels.NTIUnderConsiderationReason", "NTIUnderConsiderationReason")
                         .WithMany("UnderConsiderationReasonsMapping")
                         .HasForeignKey("NTIUnderConsiderationReasonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetter", b =>
-                {
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetterStatus", "ClosedStatus")
-                        .WithMany()
-                        .HasForeignKey("ClosedStatusId");
-
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetterStatus", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId");
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterCondition", b =>
-                {
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetterConditionType", "ConditionType")
-                        .WithMany()
-                        .HasForeignKey("ConditionTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterConditionMapping", b =>
-                {
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetterCondition", "NTIWarningLetterCondition")
-                        .WithMany("WarningLetterConditionsMapping")
-                        .HasForeignKey("NTIWarningLetterConditionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetter", "NTIWarningLetter")
-                        .WithMany("WarningLetterConditionsMapping")
-                        .HasForeignKey("NTIWarningLetterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TramsDataApi.DatabaseModels.NTIWarningLetterReasonMapping", b =>
-                {
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetter", "NTIWarningLetter")
-                        .WithMany("WarningLetterReasonsMapping")
-                        .HasForeignKey("NTIWarningLetterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TramsDataApi.DatabaseModels.NTIWarningLetterReason", "NTIWarningLetterReason")
-                        .WithMany("WarningLetterReasonsMapping")
-                        .HasForeignKey("NTIWarningLetterReasonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
